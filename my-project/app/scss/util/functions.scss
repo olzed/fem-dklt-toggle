@@ -1,0 +1,12 @@
+// Source: https://css-tricks.com/snippets/sass/px-to-em-functions/
+
+// Converts pixels to rem
+// 16px = 1 rem (usually)
+
+@function rem($pixels, $context: 16) {
+	@return (math.div($pixels, $context)) * 1rem;
+}
+
+h1 {
+    font-size: 1.875rem; // 30 px
+}
