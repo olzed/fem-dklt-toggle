@@ -17,3 +17,5 @@
 my-project/node_modules/
 my-project/dist/
 my-project/design/
+node_modules/
+my-project/node_modules
