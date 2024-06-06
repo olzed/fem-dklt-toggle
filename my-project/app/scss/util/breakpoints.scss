@@ -24,15 +24,3 @@ $breakpoints-down: (
 	}
 }
 
-// h1 {
-//     @include breakpoint(large) {
-//         font-size: 3rem;
-//     }
-// }
-
-@media(min-width: 87.5em){
-    h1 {
-        font-size: 3rem;
-    }
-}
-

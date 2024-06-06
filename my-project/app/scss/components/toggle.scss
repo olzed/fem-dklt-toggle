@@ -2,40 +2,30 @@
 
 .toggle {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 3rem;
     border: none;
-    gap: rem(4.8) rem(8);
-    grid-template-rows: repeat(2, 1fr);
     margin: 0;
+
+    label {
+        font-size: rem(14);
+        font-weight: 700;
+        color: var(--toggle);
+
+        &[for="dark"] {
+            line-height: rem(24);
+            margin-right: rem(13);
+        }
+    }
 
     &__wrapper {
         height: rem(24);
         position: relative;
-        grid-column: 2 / 3;
-        grid-row: 1 / 2;
-    }
-
-    label {
-        font-size: rem(14);
-        &[for="dark"] {
-            grid-column: 1 / 2;
-            justify-self: end;
-        }
-        &[for="system"] {
-            grid-column: 1 / 4;
-            grid-row: 2 / 3;
-            justify-self: center;
-            align-self: start;
-        }
-        &[for="light"] {
-            grid-column: 3 / 4;
-        }
     }
 
     input[type="radio"] {
-        margin: 0 -2px 0 -2px;
+        margin: 0 rem(-2) 0 rem(-2);
         opacity: 0;
-        width: rem(20);
+        width: rem(24);
         height: rem(24);
 
         &:focus ~ .toggle__button {
@@ -50,7 +40,7 @@
         width: 100%;
         top: 0;
         border-radius: rem(12);
-        background: linear-gradient(225deg, #40db82 0%, #388FE7 98.02%);
+        background: var(--toggle-bg);
         pointer-events: none;
     }
 
@@ -63,7 +53,7 @@
         width: rem(18);
         height: rem(18);
         border-radius: 50%;
-        background-color: var(--dark-bg);
+        background-color: var(--toggle-btn);
         transition: all 150ms ease-in-out;
     }
 

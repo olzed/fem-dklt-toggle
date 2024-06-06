@@ -1,4 +1,5 @@
 @use '../util' as *;
+@use '../globals/colors' as *;
 
 .header {
     display: flex;
@@ -11,15 +12,19 @@
 
     &__title {
         width: 100%;
-
+       
         @include breakpoint(medium) {
             width: auto;
         }
     }
 
+    &__h1 {
+        color: var(--text-color2);
+    }
+
     &__subtitle {
         font-size: rem(14);
         font-weight: 700;
-        color: var(--dark-text1);
+        color: var(--text-color1);
     }
 }

@@ -2,19 +2,18 @@
 // https://codepen.io/SaraSoueidan/pen/jpBbrq/?editors=1100
 
 .toggle {
-  display: grid;
-  grid-template-columns: 1fr 3rem;
   border: none;
   margin: 0;
+  grid-template-columns: 1fr 3rem;
+  display: grid;
+
 
   label {
     font-size: rem(14);
-    font-weight: 700;
     color: var(--toggle);
-
-    &[for='dark'] {
+  
+    &[for="dark"] {
       line-height: rem(24);
-      margin-right: rem(13);
     }
   }
 
